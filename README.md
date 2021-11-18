@@ -1,6 +1,6 @@
 # DeMFI
 
-**This is the official repository of DeMFI (Deep Joint Deblurring and Multi-Frame Interpolation)**
+**This is the official repository of DeMFI (Deep Joint Deblurring and Multi-Frame Interpolation).**
 
 **Coming Soon.**
 
