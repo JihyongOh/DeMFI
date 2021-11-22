@@ -14,7 +14,7 @@
 **BibTeX**
 ```bibtex
 @article{Oh2021DeMFI,
-  title={DeMFI: Deep Joint Deblurring and Multi-Frame Interpolation with Flow-Guided Attentive Correlation and Recursive Boostingn},
+  title={DeMFI: Deep Joint Deblurring and Multi-Frame Interpolation with Flow-Guided Attentive Correlation and Recursive Boosting},
   author={Oh, Jihyong and Kim, Munchurl},
   journal={arXiv preprint arXiv:2111.09985},
   year={2021}
