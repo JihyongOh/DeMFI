@@ -4,7 +4,8 @@
 
 \[[ArXiv_ver.](https://arxiv.org/abs/2111.09985)\] \[[Demo](https://youtu.be/J93tW1uwRy0)\]
 
-Last Update: 20211206
+Last Update: 20211209 - **All source codes (train+test) including checkpoints have been provided.**
+
 
 <!-- **Reference**:   -->
 ## Reference
@@ -22,7 +23,6 @@ Last Update: 20211206
 
 If you find this repository useful, please consider citing our [paper](https://arxiv.org/abs/2111.09985).
 
-**All source codes (train+test) including checkpoints will be provided soon.**
 
 ### Examples of the Demo (x8 Multi-Frame Interpolation) videos (240fps) interpolated from blurry videos (30fps)
 ![gif1](/figures/Demo_DeMFI-Net_vs_SOTA_sup_gif1.gif "gif1")
@@ -173,6 +173,11 @@ python main.py --phase 'train' --exp_num 1 --train_data_path './Datasets/Adobe_2
 ```
 ### Description
 * You can freely regulate other arguments in the parser of **main.py**, [here](https://github.com/JihyongOh/DeMFI/blob/509cb3817c6c1600f460f6894071be437521f85a/main.py#L22).
+
+## Collection_of_Visual_Results
+* We also provide all visual results (Deblurring and Multi-Frame Interpolation (x8)) on Adobe240 (_a) and GoPro(HD) (_g) for an easier comparison as belows. Each zip file has about and 3 to 3.6GB for Adobe240 and 13 to 16GB for GoPro(HD), respectively.
+* [TNTT_a](https://www.dropbox.com/s/oowpprtc3vrpfwz/TNTT_final_x8_Adobe240blur.zip?dl=0), [TNTT_g](https://www.dropbox.com/s/3ba487y8pbn87rc/TNTT_final_x8_GoProblur.zip?dl=0), [PRF_a](https://www.dropbox.com/s/eeca1c8trguero1/PRF_final_x8_Adobe240blur.zip?dl=0), [PRF_g](https://www.dropbox.com/s/5m0pd9p0drm99zr/PRF_final_x8_GoProblur.zip?dl=0), [UTI-VFI<sub>*retrain*</sub> a](https://www.dropbox.com/s/my0q9mwm3uzck5k/UTIVFI_final_x8_Adobe240blur.zip?dl=0), [UTI-VFI<sub>*retrain*</sub> g](https://www.dropbox.com/s/vqgn0af48axcpvw/UTIVFI_final_x8_GoProblur.zip?dl=0), [DeMFI-Net<sub>*rb*</sub>(5,3) a](https://www.dropbox.com/s/gfhcqwgqdyqwekn/DeMFI_rb_%285%2C3%29_final_x8_Adobe240blur.zip?dl=0), [DeMFI-Net<sub>*rb*</sub>(5,3) g](https://www.dropbox.com/s/m8r9s1vdsffg2fn/DeMFI_rb_%285%2C3%29_final_x8_GoProblur.zip?dl=0) 
+* Since the copyrights for diverse videos of YouTube240 belong to each creator, we appreciate your understanding that it cannot be distributed.
 
 
 ## Contact
