@@ -79,7 +79,7 @@ DeMFI
          ├──── train_blur 
             ├──── ...
 ``` 
-5. Download the pre-trained weight, which was trained by Adobe240, from [this link](https://www.dropbox.com/s/xj2ixvay0e5ldma/XVFInet_X4K1000FPS_exp1_latest.pt?dl=0) to place in **\<source_path\>/checkpoint_dir/DeMFInet_exp1**.
+5. Download the pre-trained weight of DeMFI-Net<sub>*rb*</sub>(5,N<sub>*tst*</sub>), which was trained by Adobe240, from [this link](https://www.dropbox.com/s/xj2ixvay0e5ldma/XVFInet_X4K1000FPS_exp1_latest.pt?dl=0) to place in **\<source_path\>/checkpoint_dir/DeMFInet_exp1**.
 ```
 DeMFI
 └── checkpoint_dir
@@ -95,14 +95,17 @@ python main.py --gpu 0 --phase 'test' --exp_num 1 --test_data_path './Datasets/A
 # For evaluating on GoPro(HD)
 python main.py --gpu 0 --phase 'test' --exp_num 1 --test_data_path './Datasets/GoPro_blur' --N_tst 3 --multiple_MFI 8 
 ```
-
+* The quantitative comparisons (Table2) are attached as belows for a reference.
+![Table2](/figures/Table2.PNG "Table2")
 
 
 ### Description
-* After running with the above test option, you can get the result images in **\<source_path\>/test_img_dir/XVFInet_X4K1000FPS_exp1**, then obtain the PSNR/SSIM/tOF results per each test clip as "total_metrics.csv" in the same folder. 
-* Our proposed XVFI-Net can start from any downscaled input upward by regulating '--S_tst', which is adjustable in terms of
-the number of scales for inference according to the input resolutions or the motion magnitudes.
-* You can get any Multi-Frame Interpolation (x M) result by regulating '--multiple'.
+* After running with the above test option, you can get the sharp frames in **\<source_path\>/test_img_dir/DeMFInet_exp1/epoch_07499_final_x8_full_resolution_Ntst3**, then obtain the PSNR/SSIM results per each time index in the screen. 
+* Our proposed DeMFI-Net we can properly regulate '--N_tst' by considering R<sub>*t*</sub> (runtime) or computational constraints, even though the training with N<sub>*trn*</sub> is once over. Further details are described in the main paper.
+* You can only get Multi-Frame Interpolation (x M) result by regulating '--multiple' as 2 or 8 for evaluation but any M can be chosen for 'test_custom' option, please refer [Test_Custom](#Test_Custom).
+
+## Test_Custom
+### Quick Start for your own **blurry** video data ('--custom_path') for any Multi-Frame Interpolation (x M)
 
 
 ## Contact
