@@ -123,7 +123,8 @@ DeMFI
        └── 'xxxxx.png'
 
 ```
-3. Download the pre-trained weight of DeMFI-Net<sub>*rb*</sub>(5,N<sub>*tst*</sub>), which was trained by Adobe240, from [this link](https://www.dropbox.com/s/xj2ixvay0e5ldma/XVFInet_X4K1000FPS_exp1_latest.pt?dl=0) to place in **\<source_path\>/checkpoint_dir/DeMFInet_exp1**.
+3. Since DeMFI-Net takes 4 input frames, each scene must have at least 4 frames.
+4. Download the pre-trained weight of DeMFI-Net<sub>*rb*</sub>(5,N<sub>*tst*</sub>), which was trained by Adobe240, from [this link](https://www.dropbox.com/s/xj2ixvay0e5ldma/XVFInet_X4K1000FPS_exp1_latest.pt?dl=0) to place in **\<source_path\>/checkpoint_dir/DeMFInet_exp1**.
 ```
 DeMFI
 └── checkpoint_dir
@@ -131,7 +132,7 @@ DeMFI
          ├── DeMFInet_exp1_latest.pt           
 ```
 
-4. Run **main.py** with the following options in parse_args (ex) joint Deblurring and Multi-Frame Interpolation (x8)): 
+5. Run **main.py** with the following options in parse_args (ex) joint Deblurring and Multi-Frame Interpolation (x8)): 
 ```bash
 python main.py --gpu 0 --phase 'test_custom' --exp_num 1 --N_tst 3 --multiple_MFI 8 --custom_path './custom_path'
 ```
