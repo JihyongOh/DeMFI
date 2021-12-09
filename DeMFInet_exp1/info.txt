@@ -1,0 +1,3 @@
+*place the downloaded pre-trained weights 'DeMFInet_exp1_latest.pt' in this folder*
+
+download link: https://www.dropbox.com/s/rooyxrlv71ewnf5/DeMFInet_exp1_latest.pt?dl=0
