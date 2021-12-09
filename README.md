@@ -4,7 +4,7 @@
 
 \[[ArXiv_ver.](https://arxiv.org/abs/2111.09985)\] \[[Demo](https://youtu.be/J93tW1uwRy0)\]
 
-Last Update: 20211209 - **All source codes (train+test) including checkpoints have been provided.**
+Last Update: 20211209 - **All source codes (train+test), checkpoint for recursive boosting and visual comparison results have been provided.**
 
 
 <!-- **Reference**:   -->
