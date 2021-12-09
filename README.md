@@ -106,6 +106,73 @@ python main.py --gpu 0 --phase 'test' --exp_num 1 --test_data_path './Datasets/G
 
 ## Test_Custom
 ### Quick Start for your own **blurry** video data ('--custom_path') for any Multi-Frame Interpolation (x M)
+1. Download the source codes in a directory of your choice **\<source_path\>**.
+2. First prepare your own blurry videos in '.png' format in **\<source_path\>/custom_path** by following a hierarchy as belows:
+```
+DeMFI
+└── custom_path
+   ├── scene1
+       ├── 'xxx.png'
+       ├── ...
+       └── 'xxx.png'
+   ...
+   
+   ├── sceneN
+       ├── 'xxxxx.png'
+       ├── ...
+       └── 'xxxxx.png'
+
+```
+3. Download the pre-trained weight of DeMFI-Net<sub>*rb*</sub>(5,N<sub>*tst*</sub>), which was trained by Adobe240, from [this link](https://www.dropbox.com/s/xj2ixvay0e5ldma/XVFInet_X4K1000FPS_exp1_latest.pt?dl=0) to place in **\<source_path\>/checkpoint_dir/DeMFInet_exp1**.
+```
+DeMFI
+└── checkpoint_dir
+   └── DeMFInet_exp1
+         ├── DeMFInet_exp1_latest.pt           
+```
+
+4. Run **main.py** with the following options in parse_args (ex) joint Deblurring and Multi-Frame Interpolation (x8)): 
+```bash
+python main.py --gpu 0 --phase 'test_custom' --exp_num 1 --N_tst 3 --multiple_MFI 8 --custom_path './custom_path'
+```
+
+
+### Description
+* Our proposed DeMFI-Net we can properly regulate '--N_tst' by considering R<sub>*t*</sub> (runtime) or computational constraints, even though the training with N<sub>*trn*</sub> is once over. Further details are described in the main paper.
+* After running with the above test option, you can get the sharp frames in **\<source_path\>/custom_path/sceneN_sharply_interpolated_x'multiple_MFI'**. 
+* You can get any Multi-Frame Interpolation (x M) result by regulating '--multiple_MFI'.
+* It only supports for '.png' format.
+* Since we can not cover diverse possibilites of naming rule for custom frames, please sort your own frames properly.
+* **Caution:** Please note that since the DeMFI-Net was trained with the predefiend blurry formation setting from [BIN (Blurry Video Frame Interpolation)](https://github.com/laomao0/BIN#testing-pre-trained-models) (K = 8 and τ = 5 in Eq. 1), the results can be over-sharpened when the input videos are already sharp (not targeted for low-frame-rate sharp videos). Research on making the network to be robust on the degree of exposure variation can be a future work. 
+
+## Training
+### Quick Start for Adobe240
+1. Download the source codes in a directory of your choice **\<source_path\>**.
+2. First download our Adobe240 ([main](https://www.dropbox.com/s/n4uc5tlik96begy/Adobe_240fps_blur.zip?dl=0), [split1](https://www.dropbox.com/s/wmd78jaob2lxpv4/Adobe_240fps_blur.z01?dl=0), [split2](https://www.dropbox.com/s/jlvfl70gs7cyrwn/Adobe_240fps_blur.z02?dl=0), [split3](https://www.dropbox.com/s/xrn52zhftojq6lx/Adobe_240fps_blur.z03?dl=0), [split4](https://www.dropbox.com/s/9xgtg1dfjb5nnyx/Adobe_240fps_blur.z04?dl=0)) (split zip files, 49.7GB) and unzip & place them as belows:
+```
+DeMFI
+└── Datasets
+      ├──── Adobe_240fps_blur
+         ├──── test
+             ├──── 720p_240fps_1
+                 ├──── 00001.png
+                 ├──── ...
+                 └──── 00742.png
+             ...
+             ├──── IMG_0183           
+         ├──── test_blur
+            ├──── ...          
+         ├──── train
+            ├──── ...          
+         ├──── train_blur 
+            ├──── ...
+``` 
+3. Run **main.py** with the following options in parse_args:  
+```bash
+python main.py --phase 'train' --exp_num 1 --train_data_path './Datasets/Adobe_240fps_blur' --test_data_path './Datasets/Adobe_240fps_blur' --N_trn 5 --N_tst 3
+```
+### Description
+* You can freely regulate other arguments in the parser of **main.py**, [here](https://github.com/JihyongOh/DeMFI/blob/509cb3817c6c1600f460f6894071be437521f85a/main.py#L22).
 
 
 ## Contact
