@@ -116,7 +116,7 @@ def parse_args():
 	parser.add_argument('--patch_boundary', default=0,
 						help='multiple of smallest spatial size for network & for margin of trimming, '
 							 'also have to consider test_patch ex) (patch_boundary/test_patch[0] or patch_boundary/test_patch[1])')
-	parser.add_argument('--multiple_MFI', type=list, default=8, help='temporal up-scaling factor x M (MFI),'
+	parser.add_argument('--multiple_MFI', type=int, default=8, help='temporal up-scaling factor x M (MFI),'
 																	 'caution: when phase="test" (evaluation with GTs), only 2 or 8 are supported.')
 
 	""" Settings for test_custom (when [phase=='test_custom']) """
