@@ -39,8 +39,9 @@ The 30fps blurry input frames are interpolated to be 240fps sharp frames. All re
 1. [Test_Custom](#Test_Custom)
 1. [Training](#Training)
 1. [Collection_of_Visual_Results](#Collection_of_Visual_Results)
+1. [Visualizations](#Visualizations)
 1. [Contact](#Contact)
-
+2. 
 ## Requirements
 Our code is implemented using PyTorch1.7, and was tested under the following setting:  
 * Python 3.7 
@@ -180,6 +181,12 @@ python main.py --phase 'train' --exp_num 1 --train_data_path './Datasets/Adobe_2
 * [TNTT_a](https://www.dropbox.com/s/oowpprtc3vrpfwz/TNTT_final_x8_Adobe240blur.zip?dl=0), [TNTT_g](https://www.dropbox.com/s/3ba487y8pbn87rc/TNTT_final_x8_GoProblur.zip?dl=0), [PRF_a](https://www.dropbox.com/s/eeca1c8trguero1/PRF_final_x8_Adobe240blur.zip?dl=0), [PRF_g](https://www.dropbox.com/s/5m0pd9p0drm99zr/PRF_final_x8_GoProblur.zip?dl=0), [UTI-VFI<sub>*retrain*</sub> a](https://www.dropbox.com/s/my0q9mwm3uzck5k/UTIVFI_final_x8_Adobe240blur.zip?dl=0), [UTI-VFI<sub>*retrain*</sub> g](https://www.dropbox.com/s/vqgn0af48axcpvw/UTIVFI_final_x8_GoProblur.zip?dl=0), [DeMFI-Net<sub>*rb*</sub>(5,3) a](https://www.dropbox.com/s/gfhcqwgqdyqwekn/DeMFI_rb_%285%2C3%29_final_x8_Adobe240blur.zip?dl=0), [DeMFI-Net<sub>*rb*</sub>(5,3) g](https://www.dropbox.com/s/m8r9s1vdsffg2fn/DeMFI_rb_%285%2C3%29_final_x8_GoProblur.zip?dl=0) 
 * Since the copyrights for diverse videos of YouTube240 belong to each creator, we appreciate your understanding that it cannot be distributed.
 
+## Visualizations
+* If you want to visualze several components, you can add '--visualization_flag True' ([visualization_flag])(https://github.com/JihyongOh/DeMFI/blob/1cf784a193cb8c41b2e4fdf6b486a409e16e5085/main.py#L108-L113) option to get a 'visualizations' folder. 
+* The diverse components are basically computed by min-max normalization as [here](https://github.com/JihyongOh/DeMFI/blob/1cf784a193cb8c41b2e4fdf6b486a409e16e5085/DeMFInet.py#L454-L496), so you can freely modify them to any other visualization technique.
+  
+* The below image is example when _t_=7/8 for a reference.
+![Visualization](/figures/GitHub_Visualization.png "Visualization")
 
 ## Contact
 If you have any question, please send an email to [[Jihyong Oh](https://sites.google.com/view/ozbro)] - jhoh94@kaist.ac.kr.
