@@ -182,10 +182,10 @@ python main.py --phase 'train' --exp_num 1 --train_data_path './Datasets/Adobe_2
 * Since the copyrights for diverse videos of YouTube240 belong to each creator, we appreciate your understanding that it cannot be distributed.
 
 ## Visualizations
-* If you want to visualze several components, you can add '--visualization_flag True' ([visualization_flag])(https://github.com/JihyongOh/DeMFI/blob/1cf784a193cb8c41b2e4fdf6b486a409e16e5085/main.py#L108-L113) option to get a 'visualizations' folder. 
+* If you want to visualze several components, you can add '--visualization_flag True' [visualization_flag](https://github.com/JihyongOh/DeMFI/blob/1cf784a193cb8c41b2e4fdf6b486a409e16e5085/main.py#L108-L113) option to get a 'visualizations' folder. 
 * The diverse components are basically computed by min-max normalization as [here](https://github.com/JihyongOh/DeMFI/blob/1cf784a193cb8c41b2e4fdf6b486a409e16e5085/DeMFInet.py#L454-L496), so you can freely modify them to any other visualization technique.
   
-* The below image is example when _t_=7/8 for a reference.
+* The below image is an example when _t_=7/8 for a reference.
 ![Visualization](/figures/GitHub_Visualization.png "Visualization")
 
 ## Contact
