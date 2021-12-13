@@ -113,7 +113,7 @@ def parse_args():
 																	'3rd row: s=1, r=0, last rightmost two images are nothing.')
 	parser.add_argument('--test_patch', type=tuple, default=(1, 1),
 						help='Divide img into patches in case of low memory')
-	parser.add_argument('--patch_boundary', default=0,
+	parser.add_argument('--patch_boundary', type=int, default=32,
 						help='multiple of smallest spatial size for network & for margin of trimming, '
 							 'also have to consider test_patch ex) (patch_boundary/test_patch[0] or patch_boundary/test_patch[1])')
 	parser.add_argument('--multiple_MFI', type=int, default=8, help='temporal up-scaling factor x M (MFI),'
