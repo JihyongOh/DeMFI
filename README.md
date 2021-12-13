@@ -41,7 +41,7 @@ The 30fps blurry input frames are interpolated to be 240fps sharp frames. All re
 1. [Collection_of_Visual_Results](#Collection_of_Visual_Results)
 1. [Visualizations](#Visualizations)
 1. [Contact](#Contact)
-2. 
+
 ## Requirements
 Our code is implemented using PyTorch1.7, and was tested under the following setting:  
 * Python 3.7 
