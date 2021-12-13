@@ -190,3 +190,6 @@ python main.py --phase 'train' --exp_num 1 --train_data_path './Datasets/Adobe_2
 
 ## Contact
 If you have any question, please send an email to [[Jihyong Oh](https://sites.google.com/view/ozbro)] - jhoh94@kaist.ac.kr.
+
+## License
+The source codes including the checkpoint can be freely used for research and education only. Any commercial use should get formal permission first.
