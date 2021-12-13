@@ -871,7 +871,7 @@ def test(test_loader, model_net, criterion, epoch, writer, args, device, model_d
 					OF_Occ_save_path = os.path.join(args.test_img_dir, model_dir, 'val_latest_OF_Occ' + post_fix)
 				else:
 					OF_Occ_save_path = os.path.join(args.test_img_dir, model_dir,
-													'epoch_' + str(epoch).zfill(5) + '_OF_Occ' + post_fix)
+													'epoch_' + str(epoch).zfill(5) + '_visualizations' + post_fix)
 
 				check_folder(OF_Occ_save_path)
 				OF_Occ_scene_save_path = os.path.join(OF_Occ_save_path, scene_name[0])
