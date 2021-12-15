@@ -59,7 +59,7 @@ Especially, if you use the other PyTorch versions, it may lead to yield a differ
 ## Test
 ### Quick Start for Evaluations on Test Datasets (Deblurring and Multi-Frame Interpolation (x8) as in Table 2)
 1. Download the source codes in a directory of your choice **\<source_path\>**.
-2. We follow a blurry formation setting from [BIN (Blurry Video Frame Interpolation)](https://github.com/laomao0/BIN#testing-pre-trained-models) by averaging 11 consecutive frames at a stride of 8 frames over time to synthesize blurry frames captured by a long exposure, which finally generates blurry frames of 30fps with K = 8 and τ = 5 in Eq. 1. We thank the authors for sharing codes for their awesome works.
+2. We follow a blurry formation setting from [BIN (Blurry Video Frame Interpolation)](https://github.com/laomao0/BIN#testing-pre-trained-models) by averaging 11 consecutive frames at a stride of 8 frames over time to synthesize blurry frames captured by a long exposure, which finally generates blurry frames of 30fps with K = 8 and τ = 5 in Eq. 1.
 3. Download datasets from the dropbox links; Adobe240 ([main](https://www.dropbox.com/s/n4uc5tlik96begy/Adobe_240fps_blur.zip?dl=0), [split1](https://www.dropbox.com/s/wmd78jaob2lxpv4/Adobe_240fps_blur.z01?dl=0), [split2](https://www.dropbox.com/s/jlvfl70gs7cyrwn/Adobe_240fps_blur.z02?dl=0), [split3](https://www.dropbox.com/s/xrn52zhftojq6lx/Adobe_240fps_blur.z03?dl=0), [split4](https://www.dropbox.com/s/9xgtg1dfjb5nnyx/Adobe_240fps_blur.z04?dl=0)) (split zip files, 49.7GB), [GoPro(HD)](https://www.dropbox.com/s/x9x36esur8rsvj7/GoPro_blur.zip?dl=0) (14.4GB). Since the copyrights for diverse videos of YouTube240 belong to each creator, we appreciate your understanding that it cannot be distributed. Original copyrights for Adobe240 and GoPro are provided via [link1](https://github.com/shuochsu/DeepVideoDeblurring) and [link2](https://github.com/SeungjunNah/DeepDeblur_release), respectively.
 4. Directory formats seem like below:
 ```
@@ -193,3 +193,6 @@ If you have any question, please send an email to [[Jihyong Oh](https://sites.go
 
 ## License
 The source codes including the checkpoint can be freely used for research and education only. Any commercial use should get formal permission first.
+
+## Acknowledgement
+We follow a blurry formation setting from [BIN (Blurry Video Frame Interpolation)](https://github.com/laomao0/BIN#testing-pre-trained-models) by averaging 11 consecutive frames at a stride of 8 frames over time to synthesize blurry frames captured by a long exposure, which finally generates blurry frames of 30fps with K = 8 and τ = 5 in Eq. 1. We thank the authors for sharing codes for their awesome works.
