@@ -80,7 +80,7 @@ DeMFI
          ├──── train_blur 
             ├──── ...
 ``` 
-5. Download the pre-trained weight of DeMFI-Net<sub>*rb*</sub>(5,N<sub>*tst*</sub>), which was trained by Adobe240, from [this link](https://www.dropbox.com/s/xj2ixvay0e5ldma/XVFInet_X4K1000FPS_exp1_latest.pt?dl=0) to place in **\<source_path\>/checkpoint_dir/DeMFInet_exp1**.
+5. Download the pre-trained weight of DeMFI-Net<sub>*rb*</sub>(5,N<sub>*tst*</sub>), which was trained by Adobe240, from [this link](https://www.dropbox.com/s/rooyxrlv71ewnf5/DeMFInet_exp1_latest.pt?dl=0) to place in **\<source_path\>/checkpoint_dir/DeMFInet_exp1**.
 ```
 DeMFI
 └── checkpoint_dir
@@ -125,7 +125,7 @@ DeMFI
 
 ```
 3. Since DeMFI-Net takes **4 input frames**, each scene must have at least 4 frames.
-4. Download the pre-trained weight of DeMFI-Net<sub>*rb*</sub>(5,N<sub>*tst*</sub>), which was trained by Adobe240, from [this link](https://www.dropbox.com/s/xj2ixvay0e5ldma/XVFInet_X4K1000FPS_exp1_latest.pt?dl=0) to place in **\<source_path\>/checkpoint_dir/DeMFInet_exp1**.
+4. Download the pre-trained weight of DeMFI-Net<sub>*rb*</sub>(5,N<sub>*tst*</sub>), which was trained by Adobe240, from [this link](https://www.dropbox.com/s/rooyxrlv71ewnf5/DeMFInet_exp1_latest.pt?dl=0) to place in **\<source_path\>/checkpoint_dir/DeMFInet_exp1**.
 ```
 DeMFI
 └── checkpoint_dir
