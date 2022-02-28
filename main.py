@@ -51,6 +51,7 @@ def parse_args():
 	# parser.add_argument("--blur_window_size", type=int, default=11, help="number of frames to de average")
 	# parser.add_argument("--blur_frame_idx", type=int, default=16, help="start of idx")
 	parser.add_argument("--t_step_size", type=int, default=8, help="K in paper")
+	parser.add_argument("--t_sampling_num", type=int, default=8, help="t_step_size/t_sampling_num")
 
 	""" 
 						<Note>
@@ -59,7 +60,7 @@ def parse_args():
         caution: idx is '+1', ex) blurry_frame_idx = 16, window_middle_delta = 8
         ==> 00017.png, 00025.png, ...., 
         by averaging 'args.blur_window_size' frames
-    """
+    	"""
 
 	""" Hyperparameters for Training (when [phase=='train']) """
 	# 1 epoch = 56 itrs., ===> total 420K itrs.
