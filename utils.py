@@ -250,9 +250,9 @@ def get_train_data(args):
 class Adobe_Train(data.Dataset):
     def __init__(self, args):
         self.args = args
-        self.t_step_size = args.t_step_size  # 8 "=K in paper"
+        self.t_sampling_num = args.t_sampling_num  # 8 "=K in paper"
         self.num_input_frames = 4
-        self.t = np.linspace((1 / self.t_step_size), (1 - (1 / self.t_step_size)), (self.t_step_size - 1))
+        self.t = np.linspace((1 / self.t_sampling_num), (1 - (1 / self.t_sampling_num)), (self.t_sampling_num - 1))
 
         self.framesPath, self.blurPath = make_2D_dataset_Adobe_Train(
             args.train_data_path)  # './Datasets/Adobe_240fps_blur'
@@ -266,15 +266,17 @@ class Adobe_Train(data.Dataset):
         blur_candidate_frames = self.blurPath[idx]  # each scene has different number of frames
 
         blur_firstFrameIdx = random.randint(0 + 1, (len(blur_candidate_frames) - 2 - 1))
-        interIdx = random.randint(1, self.t_step_size - 1)  # relative index, 1~self.t_step_size-1
+        interIdx = random.randint(1, self.t_sampling_num - 1)  # relative index, 1~self.t_sampling_num-1
         blur_absIdx = int(blur_candidate_frames[blur_firstFrameIdx].split(os.sep)[-1][:-4])  # ex) 00017.png => 17
-        sharp_abs_interFrameIdx = blur_absIdx + interIdx - 1  # ex) 17(=blur_absIdx) + 1(=interIdx) - 1 => 17
+	interval_value = int(blur_candidate_frames[blur_firstFrameIdx+1].split(os.sep)[-1][:-4])-blur_absIdx  # ex) 25-17=8
+
+	sharp_abs_interFrameIdx = int(blur_absIdx + interIdx*interval_value/self.t_sampling_num - 1)  # ex) 17(=blur_absIdx) + 1(=interIdx) - 1 => 17
         t_value = self.t[interIdx - 1]  # [0,1]
         sharp_abs_S0 = blur_absIdx - 1  # ex) 17(=blur_absIdx)  - 1 => [16]
-        sharp_abs_S1 = blur_absIdx + 8 - 1  # ex) 17(=blur_absIdx) 8 - 1 => [24]
+        sharp_abs_S1 = blur_absIdx + interval_value - 1  # ex) 17(=blur_absIdx) 8 - 1 => [24]
 
-        sharp_abs_S_minus1 = blur_absIdx - 1 - 8  # ex) 17(=blur_absIdx)  - 1 - 8 => [8]
-        sharp_abs_S2 = blur_absIdx + 8 - 1 + 8  # ex) 17(=blur_absIdx) 8 - 1 + 8 => [32]
+        sharp_abs_S_minus1 = blur_absIdx - 1 - interval_value  # ex) 17(=blur_absIdx)  - 1 - 8 => [8]
+        sharp_abs_S2 = blur_absIdx + interval_value - 1 + interval_value  # ex) 17(=blur_absIdx) 8 - 1 + 8 => [32]
 
         """ Randomly reverse frames """
         if (random.randint(0, 1)):
@@ -287,11 +289,7 @@ class Adobe_Train(data.Dataset):
         frames = frames_loader_sharp_blur_train(self.args, sharp_candidate_frames, blur_candidate_frames,
                                                 frameRange)  # including "np2Tensor [-1,1] normalized"
         # frames: [B0,B1,St,S0,S1]  (T, H, W, 3)
-        B0 = (blur_candidate_frames[frameRange[0]])
-        B1 = (blur_candidate_frames[frameRange[1]])
-        St = (sharp_candidate_frames[frameRange[2]])
-        S0 = (sharp_candidate_frames[frameRange[-2]])
-        S1 = (sharp_candidate_frames[frameRange[-1]])
+
 
         return frames, np.expand_dims(np.array(t_value, dtype=np.float32), 0)
 
