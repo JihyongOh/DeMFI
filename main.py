@@ -27,7 +27,7 @@ def parse_args():
 						choices=['DeMFInet'], help='The type of Net')
 	parser.add_argument('--net_object', default=DeMFInet,
 						choices=[DeMFInet], help='The type of Net')
-	parser.add_argument('--exp_num', type=int, default=3, help='The experiment number')
+	parser.add_argument('--exp_num', type=int, default=1, help='The experiment number')
 	parser.add_argument('--phase', type=str, default='test',
 						choices=['train', 'test', 'test_custom'])
 	parser.add_argument('--test_epoch_point', default=False,
