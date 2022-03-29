@@ -200,3 +200,4 @@ The source codes including the checkpoint can be freely used for research and ed
 
 ## Acknowledgement
 We follow a blurry formation setting from [BIN (Blurry Video Frame Interpolation)](https://github.com/laomao0/BIN#testing-pre-trained-models) by averaging 11 consecutive frames at a stride of 8 frames over time to synthesize blurry frames captured by a long exposure, which finally generates blurry frames of 30fps with K = 8 and τ = 5 in Eq. 1. We thank the authors for sharing codes for their awesome works.
+
