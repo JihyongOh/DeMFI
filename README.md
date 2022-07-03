@@ -1,4 +1,4 @@
-# DeMFI
+# DeMFI (ECCV2022)
 
 [![ArXiv](https://img.shields.io/badge/ArXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2111.09985)
 [![GitHub Stars](https://img.shields.io/github/stars/JihyongOh/DeMFI?style=social)](https://github.com/JihyongOh/DeMFI)
@@ -13,15 +13,15 @@ Last Update: 20211209 - **All source codes (train+test), checkpoint for recursiv
 
 <!-- **Reference**:   -->
 ## Reference
-> Jihyong Oh and Munchurl Kim "DeMFI: Deep Joint Deblurring and Multi-Frame Interpolation with Flow-Guided Attentive Correlation and Recursive Boosting", _arXiv preprint arXiv: 2111.09985_, 2021. 
+> Jihyong Oh and Munchurl Kim "DeMFI: Deep Joint Deblurring and Multi-Frame Interpolation with Flow-Guided Attentive Correlation and Recursive Boosting", _European Conference on Computer Vision_, 2022. 
 > 
 **BibTeX**
 ```bibtex
-@article{Oh2021DeMFI,
+@inproceedings{Oh2021DeMFI,
   title={DeMFI: Deep Joint Deblurring and Multi-Frame Interpolation with Flow-Guided Attentive Correlation and Recursive Boosting},
   author={Oh, Jihyong and Kim, Munchurl},
-  journal={arXiv preprint arXiv:2111.09985},
-  year={2021}
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2022}
 }
 ```
 
