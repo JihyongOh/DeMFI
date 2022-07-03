@@ -17,7 +17,7 @@ Last Update: 20211209 - **All source codes (train+test), checkpoint for recursiv
 > 
 **BibTeX**
 ```bibtex
-@inproceedings{Oh2021DeMFI,
+@inproceedings{Oh2022DeMFI,
   title={DeMFI: Deep Joint Deblurring and Multi-Frame Interpolation with Flow-Guided Attentive Correlation and Recursive Boosting},
   author={Oh, Jihyong and Kim, Munchurl},
   booktitle={European Conference on Computer Vision (ECCV)},
