@@ -8,7 +8,7 @@
 
 \[[ArXiv_ver.](https://arxiv.org/abs/2111.09985)\] \[[Demo](https://youtu.be/J93tW1uwRy0)\]
 
-Last Update: 03 JULY 2022 - **This work has been accepted to ECCV2022, we will update camera ready version (ECCV format) soon. Please note that the overall architecture and experiments are same as the initial arxiv version.**
+Last Update: 03 JULY 2022 - **This work has been accepted to ECCV2022, we will update camera ready version (ECCV format) soon. Please note that the overall architecture and main experiments are same as the initial arxiv version.**
 
 
 <!-- **Reference**:   -->
