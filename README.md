@@ -1,14 +1,15 @@
 # DeMFI (ECCV2022)
 
 [![ArXiv](https://img.shields.io/badge/ArXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2111.09985)
+[![ECCV2022](https://img.shields.io/badge/ECCV2022-Paper-<COLOR>.svg)](https://drive.google.com/file/d/1ABNsQkmoYtNuE8t_36cZIz8QNV9pNIoB/view?usp=sharing)
 [![GitHub Stars](https://img.shields.io/github/stars/JihyongOh/DeMFI?style=social)](https://github.com/JihyongOh/DeMFI)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=JihyongOh/DeMFI)
 
 **This is the official repository of DeMFI (Deep Joint Deblurring and Multi-Frame Interpolation).**
 
-\[[ArXiv_ver.](https://arxiv.org/abs/2111.09985)\] \[[Demo](https://youtu.be/J93tW1uwRy0)\]
+\[[ArXiv_ver.](https://arxiv.org/abs/2111.09985)\] \[[ECCV2022_ver.](https://drive.google.com/file/d/1ABNsQkmoYtNuE8t_36cZIz8QNV9pNIoB/view?usp=sharing)\] \[[Supp.](https://drive.google.com/file/d/18lRS4uq-f1wfMD9i72p5HgxCh9VpmqZB/view?usp=sharing)\] \[[Demo](https://youtu.be/J93tW1uwRy0)\]
 
-Last Update: 03 JULY 2022 - **This work has been accepted to ECCV2022, we will update camera ready version (ECCV format) soon. Please note that the overall architecture and main experiments are same as the initial arxiv version.**
+Last Update: 10 JULY 2022 - **This work has been accepted to ECCV2022, we have uploaded a camera ready version (ECCV format) and a supplementary material in above links. Please note that the overall architecture and main experiments are same as the initial arxiv version.**
 
 
 <!-- **Reference**:   -->
@@ -44,6 +45,7 @@ The 30fps blurry input frames are interpolated to be 240fps sharp frames. All re
 1. [Training](#Training)
 1. [Collection_of_Visual_Results](#Collection_of_Visual_Results)
 1. [Visualizations](#Visualizations)
+1. [Arbitrary_M](#Arbitrary_M)
 1. [Contact](#Contact)
 
 ## Requirements
@@ -191,6 +193,9 @@ python main.py --phase 'train' --exp_num 1 --train_data_path './Datasets/Adobe_2
   
 * The below image is an example when _t_=7/8 for a reference.
 ![Visualization](/figures/GitHub_Visualization.png "Visualization")
+
+## Arbitrary_M
+* Our DeMFI-Net also performs arbitrary (x M) multi-frame interpolation and here is 30fps slowmotion [demo](https://drive.google.com/file/d/1Z8G0KBv_BhVWl1G8LcATwm3ggjBBkCpb/view?usp=sharing) for M = 5, 13, 19.
 
 ## Contact
 If you have any question, please send an email to [[Jihyong Oh](https://sites.google.com/view/ozbro)] - jhoh94@kaist.ac.kr.
