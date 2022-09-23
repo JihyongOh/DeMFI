@@ -7,7 +7,10 @@
 
 **This is the official repository of DeMFI (Deep Joint Deblurring and Multi-Frame Interpolation).**
 
-\[[ArXiv_ver.](https://arxiv.org/abs/2111.09985)\] \[[ECCV2022_ver.](https://drive.google.com/file/d/1ABNsQkmoYtNuE8t_36cZIz8QNV9pNIoB/view?usp=sharing)\] \[[Supp.](https://drive.google.com/file/d/18lRS4uq-f1wfMD9i72p5HgxCh9VpmqZB/view?usp=sharing)\] \[[Demo](https://youtu.be/J93tW1uwRy0)\] \[[Poster](https://drive.google.com/file/d/1iKj_kASk1FphCCw2794LRLl6jWO6BvGr/view?usp=sharing)\]
+\[[ArXiv_ver.](https://arxiv.org/abs/2111.09985)\] \[[ECCV2022_ver.](https://drive.google.com/file/d/1ABNsQkmoYtNuE8t_36cZIz8QNV9pNIoB/view?usp=sharing)\] \[[Supp.](https://drive.google.com/file/d/18lRS4uq-f1wfMD9i72p5HgxCh9VpmqZB/view?usp=sharing)\] \[[Demo](https://youtu.be/J93tW1uwRy0)\] \[[Poster](https://drive.google.com/file/d/1iKj_kASk1FphCCw2794LRLl6jWO6BvGr/view?usp=sharing)\] \[[Video5mins(YouTube)](https://youtu.be/cMNkP9qJCR4)\]
+
+
+
 
 Last Update: 10 JULY 2022 - **This work has been accepted to ECCV2022, we have uploaded a camera ready version (ECCV format) and a supplementary material in above links. Please note that the overall architecture and main experiments are same as the initial arxiv version.**
 
