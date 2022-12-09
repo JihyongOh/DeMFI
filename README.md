@@ -105,9 +105,9 @@ python main.py --gpu 0 --phase 'test' --exp_num 1 --test_data_path './Datasets/A
 # For evaluating on GoPro(HD)
 python main.py --gpu 0 --phase 'test' --exp_num 1 --test_data_path './Datasets/GoPro_blur' --N_tst 3 --multiple_MFI 8 
 ```
-* The quantitative comparisons (Table2) are attached as belows for a reference.
+* The quantitative comparisons (Table2) and PSNR profiles for multi-frame interpolation results (Fig.5) are attached as belows for a reference.
 ![Table2](/figures/Table2.PNG "Table2")
-
+![Fig5](/figures/Fig5.PNG "Fig5")
 
 ### Description
 * After running with the above test option, you can get the sharp frames in **\<source_path\>/test_img_dir/DeMFInet_exp1/epoch_07499_final_x8_full_resolution_Ntst3**, then obtain the PSNR/SSIM results per each time index in the screen. 
