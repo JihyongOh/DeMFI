@@ -2,7 +2,7 @@
 -----------------------------------------------------------------------------------------------------------------
 <Official PyTorch Code>
 Paper: Jihyong Oh and Munchurl Kim "DeMFI: Deep Joint Deblurring and Multi-Frame Interpolation 
-		with Flow-Guided Attentive Correlation and Recursive Boosting", arXiv preprint arXiv: 2111.09985, 2021.
+		with Flow-Guided Attentive Correlation and Recursive Boosting", ECCV2022.
 
 Written by Jihyong Oh (https://sites.google.com/view/ozbro), Contact: jhoh94@kaist.ac.kr
 -----------------------------------------------------------------------------------------------------------------
